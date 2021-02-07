@@ -4,45 +4,69 @@
     <title>
         DK For Contracing
     </title>
+
+    <script>
+        function check() {
+            var x = confirm("do you like to leave page ?")
+
+
+            return x
+        }
+    </script>
+
 </head>
 
 <body>
-    <header>
-
-        <nav >
-
-            <ul>
-                <li><a href="https://ahmad-arman.github.io/traning-lab-03/">Software</a></li>
-
-                <li><a href="https://marwanreyadal-khawaldeh.github.io/Demo/">Showroom Car</a></li>
-                <li><a href="#">Building</a></li>
-                
-
-            </ul>
-
-        </nav>
-
-    </header>
-
-    
-    <main>
 
 
-        <h1>DK For Contracing</h1>
-        <img src="assets/download.jpg" alt="logo" />
-
-        <p>
-            we can every work contracting finishing work, mantinaince work, structure build 
-        </p>
 
 
-        <img src="assets/ttt.png" alt="our work" />
+    <script>
 
-    </main>
+        var age = parseInt(prompt("please insert your age"))
 
-    <footer>
-                &copy; DK For Contracing 2021
-    </footer>
+        if (age >= 18) {
+            document.write(`<header>
+<nav >
+
+    <ul>
+        <li><a onclick = "return check()" href="https://ahmad-arman.github.io/traning-lab-03/">Software</a></li>
+
+        <li><a onclick = "return check()" href="https://marwanreyadal-khawaldeh.github.io/Demo/">Showroom Car</a></li>
+        <li><a href="#">Building</a></li>
+        
+
+    </ul>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<h1>DK For Contracing</h1>
+<img src="assets/download.jpg" alt="logo" />
+
+<p>
+    we can every work contracting finishing work, mantinaince work, structure build 
+</p>
+
+
+<img src="assets/ttt.png" alt="our work" />
+
+</main>
+
+<footer>
+        &copy; DK For Contracing 2021
+</footer>
+`)
+        }
+        else {
+            document.write("<h1>You are under legal age</h1>")
+        }
+    </script>
 
 </body>
 
