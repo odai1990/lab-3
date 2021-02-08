@@ -4,15 +4,53 @@
     <title>
         DK For Contracing
     </title>
+<script>
+    
+       
 
-    <script>
+
+    var all = ""
         function check() {
             var x = confirm("do you like to leave page ?")
 
 
             return x
         }
-    </script>
+
+        function addImages() {
+
+
+            var counter = CheckUserRate();
+            for (var i = 1; i <= counter; i++) {
+                all += '<img id="' + i + 'd" style="width:300px" src=assets/imagesForJs/' + i + '.jpg alt=our work /> '
+
+                all += '<span s>image number is ' + i + ' </span><br/>'
+
+
+
+            }
+            return all
+
+        }
+
+        function CheckUserRate() {
+
+            var cheackBeforGoToOtherImage = parseInt(prompt("How much image do you want to show", "from 1 to 5"))
+            // document.querySelector("#popup").insertAdjacentHTML("afterbegin",'<img  style="width:300px" src=assets/imagesForJs/' +number+ '.jpg alt=our work /> ')
+
+            while (!(cheackBeforGoToOtherImage > 0 && cheackBeforGoToOtherImage <= 5)) {
+                cheackBeforGoToOtherImage = parseInt(prompt("How much image do you want to show", "from 1 to 5"))
+            }
+
+            if (cheackBeforGoToOtherImage > 0 && cheackBeforGoToOtherImage <= 5) {
+
+                return cheackBeforGoToOtherImage
+            }
+
+        }
+
+  
+</script>
 
 </head>
 
@@ -23,9 +61,14 @@
 
     <script>
 
-        var age = parseInt(prompt("please insert your age"))
 
-        if (age >= 18) {
+        var age = (18 == parseInt(prompt("please insert your age", "Your age must be greater than 18 or equal")))
+        while (!age) {
+            age = (18 == parseInt(prompt("please insert your age", "Your age must be greater than 18 or equal")))
+
+        }
+
+        if (age) {
             document.write(`<header>
 <nav >
 
@@ -53,8 +96,7 @@
     we can every work contracting finishing work, mantinaince work, structure build 
 </p>
 
-
-<img src="assets/ttt.png" alt="our work" />
+${addImages()}
 
 </main>
 
@@ -63,10 +105,10 @@
 </footer>
 `)
         }
-        else {
-            document.write("<h1>You are under legal age</h1>")
-        }
+
     </script>
+
+
 
 </body>
 
