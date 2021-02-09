@@ -1,0 +1,43 @@
+body{
+    width:600px;
+    margin:0 auto;
+}
+
+ul li{
+display: inline;
+margin-left: 1%;
+}
+
+h1{
+    text-align: center;
+}
+
+.logo
+{
+    float:left;
+}
+
+img:nth-child(odd),span
+{
+    float: right;
+    margin:2%;
+}
+img,span:nth-child(even),span
+{
+    float: left;
+    margin:2%;
+ 
+}
+P
+{
+    color:chartreuse;
+}
+
+main::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+footer{
+    text-align: center;
+}
